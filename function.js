@@ -52,7 +52,29 @@ if (isPrime(number)) {
 
 
 
+//what is anonymous function
 
+//anonymous function
 
+let add = function (a, b) {
+    return a + b;
+}
+
+console.log(add(1, 2)); // 3
+
+// arrow function
+
+let add = (a, b) => a + b;
+
+console.log(add(1, 2)); // 3
+
+// arrow function with multiple lines
+
+let add = (a, b) => {
+    let sum = a + b;
+    return sum;
+}
+
+console.log(add(1, 2)); // 3
 
 
