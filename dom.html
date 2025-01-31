@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="a">hi</h1>
+    <h1 id = 'r'>sarthak</h1>
+    <div id="b">
+        <h2>sam</h2>
+        <h2>venkat</h2>
+    </div>
+    <script>
+        let n = document.createElement('h1');
+        n.textContent = 'bye';
+
+        let p = document.getElementById('a').parentNode;
+        let l = document.getElementById('r');
+        p.insertBefore(n, l);
+
+        let nn = document.createElement('h2');
+        nn.textContent = 'hello';
+
+        let pp = document.getElementById('a')
+        let ll = document.getElementById('rr');
+        pp.insertBefore(nn, ll);
+    </script>
+
+
+</body>
+</html>
