@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id = "body">
+    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" class="light-bulb" id="bulb" alt="">
+    <button class="button" id = "toggleButton" onclick=toggleLight() >click me</button>
+
+
+    <script>       
+
+        let isOn = false
+        function toggleLight(){
+            const body = document.getElementById('body')
+            const button = document.getElementById('toggleButton')
+            const bulb = document.getElementById('bulb')
+            // Ensure positioning is relative for movement
+            bulb.style.position = 'relative';
+            if(isOn){
+                body.style.backgroundColor = 'white'
+                button.textContent = 'Turn On'
+                bulb.src = 'https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png'
+                bulb.style.left = '0px';   // move to left side
+            }else{
+               
+                
+                body.style.backgroundColor = 'yellow'
+                button.textContent = 'Turn Off'
+                bulb.src = 'https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png'
+                bulb.style.width = '150px'
+                bulb.style.left = '500px';  // move to right side
+                bulb.style.transition = 'all 1s'
+                
+            }
+            isOn = !isOn
+        }
+    </script>
+</body>
+</html>
